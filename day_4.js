@@ -6,19 +6,17 @@ twice should revert the toggle back to its original value.
 */
 
 const someToggle = {
-  name:"toggleA",
-  isOn:false
+  name: "toggleA",
+  isOn: true
 }
 
 const switchToggle = (toggle) => {
   if (toggle.isOn === false) {
     toggle.isOn = true;
-    return toggle    
-  }
-  if (toggle.isOn === true) {
+  } else {
     toggle.isOn = false;
-    return toggle
   }
+  return toggle    
 }
 console.log('before', someToggle);
 console.log(switchToggle(someToggle));
